@@ -229,7 +229,7 @@ public final class General {
 						break;
 					}
 				if (!found)
-					compressed.add(new ItemStack(type, item.getAmount(), (short)0, data));
+					compressed.add(new ItemStack(type, item.getAmount(), (short)0)); //@author computerxpds, fixed depreciated method.
 			}
 		Collections.sort(compressed, new ItemStackComparator());
 		return compressed.toArray(new ItemStack[compressed.size()]);

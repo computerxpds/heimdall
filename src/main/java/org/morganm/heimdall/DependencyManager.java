@@ -75,6 +75,8 @@ public class DependencyManager implements Listener {
 				heimdall.getPermissionSystem().setupPermissions(heimdall.isVerboseEnabled());
 			}
 			break;
+		default:
+			break;
 		}
 	}
 

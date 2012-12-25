@@ -95,7 +95,7 @@ public class Heimdall extends JavaPlugin implements JavaPluginExtensions {
 		
 		playerStateManager.getPlayerTracker().reset();
 		
-		getServer().getScheduler().scheduleAsyncRepeatingTask(this, new Runnable() {
+		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
 			public void run() { flushLogs(); }
 		}, 300, 300);	// every 15 seconds
 

@@ -38,7 +38,8 @@ public class JarUtils {
 	 * @param fileName the name of the file. example: "config.yml"
 	 * @param outfile the File to copy to. example: "plugins/MyPlugin/config.yml"
 	 */
-    public void copyConfigFromJar(String fileName, File outfile) {
+    @SuppressWarnings("resource")
+	public void copyConfigFromJar(String fileName, File outfile) {
         File file = new File(plugin.getDataFolder(), fileName);
         
         if (!outfile.canRead()) {
@@ -59,7 +60,8 @@ public class JarUtils {
         }
     }
     
-    public int getBuildNumber() {
+    @SuppressWarnings("resource")
+	public int getBuildNumber() {
     	int buildNum = -1;
     	
         try {
